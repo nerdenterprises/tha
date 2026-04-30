@@ -101,10 +101,45 @@
       font-size: 0.95rem;
     }
 
+    .cta {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      padding: 14px 20px;
+      max-width: 320px;
+      background: var(--accent-2);
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-md);
+      transition: background 0.15s ease, box-shadow 0.15s ease, transform 0.05s ease;
+      flex-shrink: 0;
+    }
+    .cta:hover {
+      background: #2592c8;
+      box-shadow: var(--shadow-lg);
+    }
+    .cta:active { transform: translateY(1px); }
+    .cta:focus-visible {
+      outline: 3px solid var(--accent-2-soft);
+      outline-offset: 2px;
+    }
+    .cta-title {
+      font-weight: 700;
+      font-size: 1.02rem;
+      letter-spacing: -0.005em;
+    }
+    .cta-subtitle {
+      font-size: 0.82rem;
+      line-height: 1.35;
+      opacity: 0.94;
+    }
+
     @media (max-width: 520px) {
       header { gap: 14px; }
       .logo { height: 64px; }
       h1 { font-size: 1.5rem; }
+      .cta { width: 100%; max-width: none; }
     }
 
     .stack > * + * { margin-top: 20px; }
@@ -511,6 +546,10 @@
         <h1>Loan Calculator</h1>
         <p class="subtitle">Enter your loan details and click Calculate. Then drag the slider to model a higher monthly payment and see how much sooner your loan would pay off.</p>
       </div>
+      <a class="cta" href="https://calendly.com/book-with-seth/tha-circle" target="_blank" rel="noopener noreferrer">
+        <span class="cta-title">THA Discovery Call</span>
+        <span class="cta-subtitle">Schedule a 15 minute call so we can see if THA is right for you.</span>
+      </a>
     </header>
 
     <div class="stack">
